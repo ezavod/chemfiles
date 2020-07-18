@@ -74,7 +74,7 @@ constructor to manually specify which format to use.
 .. _CML: http://www.xml-cml.org
 .. _CSSR: http://www.chem.cmu.edu/courses/09-560/docs/msi/modenv/D_Files.html#944777
 .. _DCD: http://www.ks.uiuc.edu/Research/vmd/plugins/molfile/dcdplugin.html
-.. _GRO: http://manual.gromacs.org/current/online/gro.html
+.. _GRO: http://manual.gromacs.org/current/reference-manual/file-formats.html#gro
 .. _LAMMPS Data: http://lammps.sandia.gov/doc/read_data.html
 .. _LAMMPS: https://lammps.sandia.gov/doc/dump.html
 .. _mmCIF: http://mmcif.wwpdb.org/
