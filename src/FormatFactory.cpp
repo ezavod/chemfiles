@@ -19,6 +19,7 @@
 
 #include "chemfiles/formats/Molfile.hpp"
 #include "chemfiles/formats/AmberNetCDF.hpp"
+#include "chemfiles/formats/AmberRestart.hpp"
 #include "chemfiles/formats/LAMMPSData.hpp"
 #include "chemfiles/formats/Tinker.hpp"
 #include "chemfiles/formats/PDB.hpp"
@@ -56,6 +57,7 @@ FormatFactory::FormatFactory() {
     this->add_format<PDBFormat>();
     this->add_format<TNGFormat>();
     this->add_format<AmberNetCDFFormat>();
+    this->add_format<AmberRestartFormat>();
     this->add_format<TinkerFormat>();
     this->add_format<LAMMPSDataFormat>();
     this->add_format<SDFFormat>();
