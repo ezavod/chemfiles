@@ -25,6 +25,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * Added read and write support for extended XYZ. The XYZ format now default to
   extended output, and read extended files. Extended XYZ allow storing unit
   cell and arbitrary atomic properties.
+* Added read and write support for Amber Restart (.ncrst) files.
 
 ## 0.9.3 (5 Feb 2020)
 
