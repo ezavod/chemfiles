@@ -101,6 +101,28 @@ void nc::NcFloat::add(count_t start, count_t count, std::vector<float> data) {
     nc::check(status, "could not put data in variable");
 }
 
+std::vector<double> nc::NcDouble::get(count_t start, count_t count) const {
+    auto size = hyperslab_size(count);
+    auto result = std::vector<double>(size, 0.0);
+    int status = nc_get_vara_double(
+        file_id_, var_id_,
+        start.data(), count.data(),
+        result.data()
+    );
+    nc::check(status, "could not read variable");
+    return result;
+}
+
+void nc::NcDouble::add(count_t start, count_t count, std::vector<double> data) {
+    assert(data.size() == hyperslab_size(count));
+    int status = nc_put_vara_double(
+        file_id_, var_id_,
+        start.data(), count.data(),
+        data.data()
+    );
+    nc::check(status, "could not put data in variable");
+}
+
 void nc::NcChar::add(const std::string& data) {
     int status = nc_put_var_text(file_id_, var_id_, data.c_str());
     nc::check(status, "could not put text data in variable");
